@@ -1,5 +1,7 @@
-const githubBtn = document.querySelector(".github")
+const botones = document.querySelectorAll(".btn")
 
-githubBtn.addEventListener("click", () => {
-    console.log("Visita a GitHub")
+botones.forEach(boton=>{
+boton.addEventListener("click",()=>{
+console.log("Se hizo clic en servicios")
+})
 })
