@@ -1,7 +1,19 @@
-const botones = document.querySelectorAll(".btn")
+// Script simple para el portafolio
 
-botones.forEach(boton=>{
-boton.addEventListener("click",()=>{
-console.log("Se hizo clic en servicios")
-})
-})
+console.log("Portafolio cargado correctamente");
+
+// ejemplo: scroll suave a secciones
+
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+link.addEventListener("click", function(e){
+
+e.preventDefault();
+
+const destino = document.querySelector(this.getAttribute("href"));
+
+destino.scrollIntoView({
+behavior:"smooth"
+});
+
+});
+});
