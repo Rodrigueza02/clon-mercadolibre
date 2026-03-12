@@ -1,0 +1,260 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+color:#1d1d1f;
+background:linear-gradient(180deg,#f6f7fb 0%,#eef2ff 55%,#e4f2ff 100%);
+}
+
+/* HEADER */
+
+.header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:26px 8%;
+background:#fff;
+}
+
+.logo{
+font-size:22px;
+font-weight:700;
+color:#5a5bd6;
+}
+
+.nav a{
+margin:0 14px;
+text-decoration:none;
+font-weight:500;
+color:#333;
+font-size:14px;
+}
+
+/* TITULO */
+
+.titulo-pagina{
+text-align:center;
+padding-top:40px;
+}
+
+.titulo-pagina p{
+color:#6b6bd6;
+font-size:14px;
+margin-bottom:6px;
+}
+
+.titulo-pagina h1{
+font-size:48px;
+}
+
+/* HERO */
+
+.hero{
+padding:60px 8%;
+display:grid;
+grid-template-columns:1fr 1fr;
+align-items:center;
+gap:60px;
+}
+
+.badge{
+background:#ffe6ea;
+color:#ff4b6e;
+padding:6px 14px;
+border-radius:20px;
+font-size:12px;
+}
+
+.presentacion{
+color:#6b6bd6;
+margin-top:10px;
+}
+
+.hero h2{
+font-size:30px;
+margin:10px 0;
+}
+
+.descripcion{
+color:#555;
+line-height:1.7;
+margin-bottom:20px;
+}
+
+.botones{
+display:flex;
+gap:15px;
+}
+
+.btn{
+background:#5a5bd6;
+color:white;
+padding:12px 20px;
+border-radius:10px;
+text-decoration:none;
+font-size:14px;
+}
+
+.btn-secundario{
+text-decoration:none;
+color:#333;
+font-weight:500;
+}
+
+/* IMAGEN */
+
+.hero-imagen{
+background:#ececfb;
+width:420px;
+height:300px;
+border-radius:200px;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.hero-imagen img{
+width:250px;
+border-radius:50%;
+}
+
+/* ESTADISTICAS */
+
+.estadisticas{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+text-align:center;
+padding:40px 8%;
+gap:20px;
+}
+
+.stat h3{
+font-size:22px;
+}
+
+.stat p{
+font-size:13px;
+color:#666;
+}
+
+/* SECCIONES */
+
+.seccion{
+padding:80px 8%;
+}
+
+.titulo-seccion{
+text-align:center;
+margin-bottom:50px;
+}
+
+.titulo-seccion p{
+color:#6b6bd6;
+}
+
+.titulo-seccion h2{
+font-size:32px;
+}
+
+/* SERVICIOS */
+
+.grid-servicios{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:26px;
+}
+
+.card{
+background:#fff;
+padding:28px;
+border-radius:16px;
+box-shadow:0 10px 24px rgba(0,0,0,0.05);
+}
+
+.card h3{
+margin-bottom:10px;
+}
+
+.card p{
+font-size:13px;
+color:#666;
+}
+
+.leer{
+color:#5a5bd6;
+font-size:13px;
+}
+
+/* TECNOLOGIAS */
+
+.grid-tecnologias{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+}
+
+.grid-tecnologias div{
+background:#fff;
+padding:30px;
+border:1px solid #eee;
+text-align:center;
+color:#777;
+}
+
+.github-boton{
+text-align:center;
+margin-top:40px;
+}
+
+/* FOOTER */
+
+.footer{
+background:#fff;
+padding:60px 8%;
+}
+
+.footer-grid{
+display:grid;
+grid-template-columns:2fr 1fr 1fr 1fr;
+gap:30px;
+}
+
+.footer h4{
+margin-bottom:10px;
+}
+
+.copyright{
+text-align:center;
+margin-top:40px;
+color:#777;
+font-size:13px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+.hero{
+grid-template-columns:1fr;
+}
+
+.estadisticas{
+grid-template-columns:repeat(2,1fr);
+}
+
+.grid-servicios{
+grid-template-columns:1fr;
+}
+
+.grid-tecnologias{
+grid-template-columns:repeat(2,1fr);
+}
+
+.footer-grid{
+grid-template-columns:1fr;
+}
+
+}
