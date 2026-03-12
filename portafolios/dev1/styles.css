@@ -58,3 +58,11 @@ body{
     text-decoration:none;
     border-radius:5px;
 }
+
+.card{
+    transition: transform 0.3s;
+}
+
+.card:hover{
+    transform: scale(1.05);
+}
