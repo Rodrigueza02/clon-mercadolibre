@@ -1,0 +1,60 @@
+body{
+    font-family: Arial, sans-serif;
+    background:#f4f6f9;
+    margin:0;
+}
+
+.portfolio{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    width:320px;
+    border-radius:10px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.avatar{
+    width:120px;
+    border-radius:50%;
+    margin-bottom:15px;
+}
+
+.descripcion{
+    font-size:14px;
+    color:#555;
+}
+
+.servicios{
+    list-style:none;
+    padding:0;
+}
+
+.servicios li{
+    margin:5px 0;
+}
+
+.tecnologias span{
+    display:inline-block;
+    background:#ffe600;
+    padding:5px 10px;
+    margin:5px;
+    border-radius:5px;
+    font-size:12px;
+}
+
+.github{
+    display:inline-block;
+    margin-top:15px;
+    padding:10px 15px;
+    background:#333;
+    color:white;
+    text-decoration:none;
+    border-radius:5px;
+}
