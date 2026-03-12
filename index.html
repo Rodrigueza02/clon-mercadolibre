@@ -1,150 +1,275 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clon MercadoLibre</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Mercado Libre Clone</title>
+    <link rel="icon" type="image/png" href="public/icons/manosmercadolibre.png">
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-top">
+            <div class="container">
+                <div class="navbar-content">
+                    <!-- Logo y ubicación -->
+                    <div class="navbar-left">
+                        <div class="logo-container">
+                            <img src="public/logos/mercado-libre.png" alt="Mercado Libre" class="logo">
+                        </div>
+                        <div class="location">
+                            <img src="public/icons/location.svg" alt="Ubicación" class="location-icon" width="24" height="24">
+                            <div class="location-text">
+                                <span class="location-label">Ingresa tu</span>
+                                <span class="location-name">Ubicación</span>
+                            </div>
+                        </div>
+                    </div>
 
-    <!-- NAVBAR -->
-    <header class="navbar">
-
-        <div class="logo">
-            <h1>MercadoLibre</h1>
+                    <!-- Buscador -->
+                    <div class="search-container">
+                        <input type="text" class="search-input" placeholder="Buscar productos, marcas y más...">
+                        <button class="search-button">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                <path d="M12.5 11h-.79l-.28-.27A6.471 6.471 0 0013 6.5 6.5 6.5 0 106.5 13c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L17.49 16l-4.99-5zm-6 0C4.01 11 2 8.99 2 6.5S4.01 2 6.5 2 11 4.01 11 6.5 8.99 11 6.5 11z" fill="currentColor"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <nav>
-            <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Productos</a></li>
-                <li><a href="#">Servicios</a></li>
-                <li><a href="#">Desarrolladores</a></li>
-            </ul>
-        </nav>
-
-        <div class="cart">
-            🛒 <span class="cart-count">0</span>
+        <!-- Menú inferior -->
+        <div class="navbar-bottom">
+            <div class="container">
+                <ul class="nav-menu">
+                    <li class="nav-item-dropdown">
+                        <a href="#" class="nav-link" id="categoriasBtn">
+                            Portafolios
+                            <svg class="dropdown-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M6 9l6 6 6-6"/>
+                            </svg>
+                        </a>
+                        <div class="dropdown-menu" id="categoriasDropdown">
+                            <h4 class="dropdown-title">Currículums del Equipo</h4>
+                            <ul class="dropdown-list">
+                                <li><a href="hv/Daniel/index.html" class="dropdown-link">Daniel</a></li>
+                                <li><a href="hv/Edwar/index.html" class="dropdown-link">Edwar</a></li>
+                                <li><a href="hv/Juanma/index.html" class="dropdown-link">Juanma</a></li>
+                                <li><a href="hv/Sebastian/index.html" class="dropdown-link">Sebastian</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#" class="nav-link">Ofertas</a></li>
+                    <li><a href="#" class="nav-link">Cupones</a></li>
+                    <li><a href="#" class="nav-link">Supermercado</a></li>
+                    <li><a href="#" class="nav-link">Moda</a></li>
+                    <li><a href="#" class="nav-link">Vender</a></li>
+                    <li><a href="#" class="nav-link">Ayuda / PQR</a></li>
+                </ul>
+                <ul class="nav-menu-right">
+                    <li><a href="#" class="nav-link nav-link-account">Crea tu cuenta</a></li>
+                    <li><a href="#" class="nav-link nav-link-account">Ingresa</a></li>
+                    <li><a href="#" class="nav-link nav-link-account">Mis compras</a></li>
+                    <li>
+                        <a href="#" class="nav-link cart-link">
+                            <img src="public/icons/shopping_cart.svg" alt="Carrito" width="22" height="22">
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
+    </nav>
 
-    </header>
-
-
+    <!-- Contenido principal -->
     <main>
-
-        <!-- BUSCADOR -->
-        <section class="search-section">
-
-            <h2>Buscar productos</h2>
-
-            <div class="search-bar">
-                <input type="text" placeholder="Buscar productos...">
-                <button>Buscar</button>
+        <!-- Carrusel de ofertas -->
+        <section class="carousel-section">
+            <div class="carousel-container">
+                <button class="carousel-btn carousel-btn-prev" id="prevBtn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                
+                <div class="carousel-wrapper">
+                    <div class="carousel-track" id="carouselTrack">
+                        <div class="carousel-slide active">
+                            <img src="public/logos/oferta_1.webp" alt="Oferta 1">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="public/logos/oferta_2.webp" alt="Oferta 2">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="public/logos/oferta_3.webp" alt="Oferta 3">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="public/logos/oferta_4.webp" alt="Oferta 4">
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="carousel-btn carousel-btn-next" id="nextBtn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                
+                <div class="carousel-indicators" id="indicators">
+                    <span class="indicator active" data-slide="0"></span>
+                    <span class="indicator" data-slide="1"></span>
+                    <span class="indicator" data-slide="2"></span>
+                    <span class="indicator" data-slide="3"></span>
+                </div>
             </div>
-
+            
+            <!-- Tarjetas de funciones -->
+            <div class="features-cards">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img src="public/icons/regalo.jpg" alt="Envío gratis" class="icon-img">
+                    </div>
+                    <h3 class="feature-title">Envío gratis</h3>
+                    <p class="feature-description">Beneficio por ser tu primera compra.</p>
+                    <a href="#" class="feature-link">Mostrar productos</a>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img src="public/icons/cuenta.jpg" alt="Ingresa a tu cuenta" class="icon-img">
+                    </div>
+                    <h3 class="feature-title">Ingresa a tu cuenta</h3>
+                    <p class="feature-description">Disfruta de ofertas y compra sin límites.</p>
+                    <a href="#" class="feature-link">Ingresar a tu cuenta</a>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img src="public/icons/ubicacion.jpg" alt="Ingresa tu ubicación" class="icon-img">
+                    </div>
+                    <h3 class="feature-title">Ingresa tu ubicación</h3>
+                    <p class="feature-description">Consulta costos y tiempos de entrega.</p>
+                    <a href="#" class="feature-link">Ingresar ubicación</a>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img src="public/icons/medios_de_pago.jpg" alt="Medios de pago" class="icon-img">
+                    </div>
+                    <h3 class="feature-title">Medios de pago</h3>
+                    <p class="feature-description">Paga tus compras de forma rápida y segura.</p>
+                    <a href="#" class="feature-link">Conocer medios de pago</a>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img src="public/icons/menosde.jpg" alt="Menos de $40.000" class="icon-img">
+                    </div>
+                    <h3 class="feature-title">Menos de $40.000</h3>
+                    <p class="feature-description">Descubre productos con precios bajos.</p>
+                    <a href="#" class="feature-link">Mostrar productos</a>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img src="public/icons/masvendidos.jpg" alt="Más vendidos" class="icon-img">
+                    </div>
+                    <h3 class="feature-title">Más vendidos</h3>
+                    <p class="feature-description">Explora los productos que son tendencia.</p>
+                    <a href="#" class="feature-link">Ir a Más vendidos</a>
+                </div>
+            </div>
         </section>
 
-
-        <!-- PRODUCTOS DESTACADOS -->
-        <section class="products">
-
-            <h2>Productos destacados</h2>
-
-            <div class="product-list">
-
-                <div class="product-card">
-
-                    <h3>Producto 1</h3>
-                    <p>$100.000</p>
-
-                    <button class="add-cart">Agregar al carrito</button>
-                    <button class="favorite">🤍</button>
-
-                </div>
-
-                <div class="product-card">
-
-                    <h3>Producto 2</h3>
-                    <p>$200.000</p>
-
-                    <button class="add-cart">Agregar al carrito</button>
-                    <button class="favorite">🤍</button>
-
-                </div>
-
-                <div class="product-card">
-
-                    <h3>Producto 3</h3>
-                    <p>$300.000</p>
-
-                    <button class="add-cart">Agregar al carrito</button>
-                    <button class="favorite">🤍</button>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- SERVICIOS -->
-        <section class="services">
-
-            <h2>Servicios</h2>
-
-            <div class="service">
-                <p>Envíos súper rápidos</p>
-            </div>
-
-            <div class="service">
-                <p>Pagos seguros</p>
-            </div>
-
-            <div class="service">
-                <p>Soporte 24/7</p>
-            </div>
-
-        </section>
-
-
-        <!-- PORTAFOLIO DESARROLLADORES -->
-        <section class="developers">
-
-            <h2>Portafolio de desarrolladores</h2>
-
-            <div class="developers-container">
-
-                <div class="developer-card">
-                    <h3>Maria</h3>
-                    <p>Desarrolladora Frontend</p>
-                </div>
-
-                <div class="developer-card">
-                    <h3>Helen</h3>
-                    <p>Desarrolladora Web</p>
-                </div>
-
-            </div>
-
-        </section>
-
+        <!-- Aquí irán las demás secciones -->
     </main>
 
+    <!-- Footer -->
+    <footer class="footer">
+        <!-- Sección de beneficios -->
+        <div class="footer-benefits">
+            <div class="container">
+                <div class="benefits-grid">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <!-- Ícono de tarjeta -->
+                        </div>
+                        <div class="benefit-content">
+                            <h4 class="benefit-title">Pagá con tarjeta o en efectivo</h4>
+                            <p class="benefit-text">Con Mercado Pago, pagá en cuotas y aprovechá la comodidad de financiación que te da tu banco, o hacelo con efectivo en puntos de pago. ¡Y siempre es seguro!</p>
+                            <a href="#" class="benefit-link">Cómo pagar con Mercado Pago</a>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <!-- Ícono de envío -->
+                        </div>
+                        <div class="benefit-content">
+                            <h4 class="benefit-title">Envío gratis por ser tu primera compra</h4>
+                            <p class="benefit-text">Aprovechá este beneficio en millones de productos.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <!-- Ícono de seguridad -->
+                        </div>
+                        <div class="benefit-content">
+                            <h4 class="benefit-title">Seguridad, de principio a fin</h4>
+                            <p class="benefit-text">¿No te gusta? ¡Devolvelo! En Mercado Libre, no hay nada que no puedas hacer, porque estás siempre protegido.</p>
+                            <a href="#" class="benefit-link">Cómo te protegemos</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-    <!-- BOTÓN VOLVER ARRIBA -->
-    <button class="back-to-top">↑</button>
+        <!-- Productos más buscados -->
+        <div class="footer-products">
+            <div class="container">
+                <h3 class="footer-section-title">Productos más buscados</h3>
+                <div class="products-links">
+                    <a href="#">Air Fryer</a> | <a href="#">Aire Acondicionado</a> | <a href="#">Aire Acondicionado Portátil</a> | <a href="#">Auriculares</a> | <a href="#">Apple TV</a> | <a href="#">Apple Watch</a> | <a href="#">Audífonos</a> | <a href="#">Audífonos Inalámbricos</a> | <a href="#">Bafles</a> | <a href="#">Bici</a> | <a href="#">Horno</a> | <a href="#">Huawei</a> | <a href="#">Ipad</a> | <a href="#">Iphone 14</a> | <a href="#">Iphone 15</a> | <a href="#">Iphone 16</a> | <a href="#">Iphone 16 Pro</a> | <a href="#">Iphone 16 Pro Max</a> | <a href="#">Iphone 16 Pro Max - Jbl</a> | <a href="#">Lavadora</a> | <a href="#">Lenovo</a> | <a href="#">Motorola Moto</a> | <a href="#">Nintendo Switch</a> | <a href="#">Oppo Reno 7</a> | <a href="#">Playstation 5</a> | <a href="#">Redmi</a> | <a href="#">Redmi 12</a> | <a href="#">Redmi Note 11</a> | <a href="#">Reloj Inteligente</a> | <a href="#">Silla</a> | <a href="#">Silla Gamer</a> | <a href="#">Samsung A54</a> | <a href="#">Samsung Z Flip</a> | <a href="#">Samsung S24 Ultra</a> | <a href="#">Silla Gamer</a> | <a href="#">Smartwatch</a> | <a href="#">Tablet</a> | <a href="#">Tecno</a> | <a href="#">Ventiladores</a> | <a href="#">Webcam</a> | <a href="#">Xbox</a> | <a href="#">Xbox Series S</a> | <a href="#">Xbox Series X</a> | <a href="#">Xiaomi</a>
+                </div>
+            </div>
+        </div>
 
+        <!-- Buscar productos por letra -->
+        <div class="footer-alphabet">
+            <div class="container">
+                <h3 class="footer-section-title">Buscar productos por letra</h3>
+                <div class="alphabet-links">
+                    <a href="#">A</a> - <a href="#">B</a> - <a href="#">C</a> - <a href="#">D</a> - <a href="#">E</a> - <a href="#">F</a> - <a href="#">G</a> - <a href="#">H</a> - <a href="#">I</a> - <a href="#">J</a> - <a href="#">K</a> - <a href="#">L</a> - <a href="#">M</a> - <a href="#">N</a> - <a href="#">Ñ</a> - <a href="#">O</a> - <a href="#">P</a> - <a href="#">Q</a> - <a href="#">R</a> - <a href="#">S</a> - <a href="#">T</a> - <a href="#">U</a> - <a href="#">V</a> - <a href="#">W</a> - <a href="#">X</a> - <a href="#">Y</a> - <a href="#">Z</a>
+                </div>
+            </div>
+        </div>
 
-    <!-- FOOTER -->
-    <footer>
-        <p>Proyecto académico - Ingeniería de Software</p>
+        <!-- Más información -->
+        <div class="footer-info">
+            <div class="container">
+                <h3 class="footer-section-title">Más información</h3>
+                <div class="info-links">
+                    <a href="#">Trabaja con nosotros</a> | <a href="#">Términos y condiciones</a> | <a href="#">Promociones</a> | <a href="#">Cómo cuidamos tu privacidad</a> | <a href="#">Accesibilidad</a> | <a href="#">Ayuda / PQR</a> | <a href="#">Nuestro</a> | <a href="#">www.sic.gov.co</a>
+                </div>
+                <p class="footer-address">Copyright © 1999-2025 MercadoLibre.com.co #1154</p>
+                <p class="footer-address">Cra 100 #15-2 Piso 7 Bog, Pan 8, Bogotá DC, Colombia</p>
+            </div>
+        </div>
+
+        <!-- Cookies notice -->
+        <div class="footer-cookies">
+            <div class="container">
+                <p>Usamos cookies para mejorar tu experiencia en Mercado Libre. Consulta más en nuestra <a href="#">Política de cookies</a>.</p>
+                <div class="cookies-buttons">
+                    <button class="btn-cookies-accept">Aceptar cookies</button>
+                    <button class="btn-cookies-config">Configurar cookies</button>
+                </div>
+            </div>
+        </div>
     </footer>
 
-
-    <script src="js/script.js"></script>
-
+    <script src="script.js"></script>
 </body>
 </html>
