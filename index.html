@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clon MercadoLibre</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -11,6 +12,7 @@
 
     <!-- NAVBAR -->
     <header class="navbar">
+
         <div class="logo">
             <h1>MercadoLibre</h1>
         </div>
@@ -23,85 +25,124 @@
                 <li><a href="#">Desarrolladores</a></li>
             </ul>
         </nav>
+
+        <div class="cart">
+            🛒 <span class="cart-count">0</span>
+        </div>
+
     </header>
-     <!-- BUSCADOR -->
-    <section class="search-section">
-        <h2>Buscar productos</h2>
 
-        <input type="text" placeholder="Buscar productos...">
 
-        <button>Buscar</button>
-    </section>
+    <main>
 
-    <!-- PRODUCTOS DESTACADOS -->
-    <section class="products">
+        <!-- BUSCADOR -->
+        <section class="search-section">
 
-        <h2>Producto destacados</h2>
+            <h2>Buscar productos</h2>
 
-        <div class="product-list">
-
-            <div class="product-card">
-                <h3>Producto 1</h3>
-                <p>$100.000</p>
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar productos...">
+                <button>Buscar</button>
             </div>
 
-            <div class="product-card">
-                <h3>Producto 2</h3>
-                <p>$200.000</p>
+        </section>
+
+
+        <!-- PRODUCTOS DESTACADOS -->
+        <section class="products">
+
+            <h2>Productos destacados</h2>
+
+            <div class="product-list">
+
+                <div class="product-card">
+
+                    <h3>Producto 1</h3>
+                    <p>$100.000</p>
+
+                    <button class="add-cart">Agregar al carrito</button>
+                    <button class="favorite">🤍</button>
+
+                </div>
+
+                <div class="product-card">
+
+                    <h3>Producto 2</h3>
+                    <p>$200.000</p>
+
+                    <button class="add-cart">Agregar al carrito</button>
+                    <button class="favorite">🤍</button>
+
+                </div>
+
+                <div class="product-card">
+
+                    <h3>Producto 3</h3>
+                    <p>$300.000</p>
+
+                    <button class="add-cart">Agregar al carrito</button>
+                    <button class="favorite">🤍</button>
+
+                </div>
+
             </div>
 
-            <div class="product-card">
-                <h3>Producto 3</h3>
-                <p>$300.000</p>
+        </section>
+
+
+        <!-- SERVICIOS -->
+        <section class="services">
+
+            <h2>Servicios</h2>
+
+            <div class="service">
+                <p>Envíos súper rápidos</p>
             </div>
 
-        </div>
-    </section>
-    <!-- SERVICIOS -->
-    <section class="services">
-
-        <h2>Servicios</h2>
-
-        <div class="service">
-            <p>Envíos super rápidos</p>
-        </div>
-
-        <div class="service">
-            <p>Pagos seguros</p>
-        </div>
-
-        <div class="service">
-            <p>Soporte 24/7</p>
-        </div>
-
-    </section>
-
- <!-- PORTAFOLIO DESARROLLADORES -->
-    <section class="developers">
-
-        <h2>Portafolio de desarrolladores</h2>
-
-        <div class="developers-container">
-
-            <!-- PORTAFOLIO 1 -->
-            <div class="developer-card">
-                <h3>Maria</h3>
-                <p>Desarrolladora Frontend</p>
+            <div class="service">
+                <p>Pagos seguros</p>
             </div>
 
-            <!-- PORTAFOLIO 2 -->
-            <div class="developer-card">
-                <h3>Helen</h3>
-                <p>Desarrolladora Web</p>
+            <div class="service">
+                <p>Soporte 24/7</p>
             </div>
 
-        </div>
+        </section>
 
-    </section>
-      <!-- FOOTER -->
+
+        <!-- PORTAFOLIO DESARROLLADORES -->
+        <section class="developers">
+
+            <h2>Portafolio de desarrolladores</h2>
+
+            <div class="developers-container">
+
+                <div class="developer-card">
+                    <h3>Maria</h3>
+                    <p>Desarrolladora Frontend</p>
+                </div>
+
+                <div class="developer-card">
+                    <h3>Helen</h3>
+                    <p>Desarrolladora Web</p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- BOTÓN VOLVER ARRIBA -->
+    <button class="back-to-top">↑</button>
+
+
+    <!-- FOOTER -->
     <footer>
         <p>Proyecto académico - Ingeniería de Software</p>
     </footer>
+
 
     <script src="js/script.js"></script>
 
