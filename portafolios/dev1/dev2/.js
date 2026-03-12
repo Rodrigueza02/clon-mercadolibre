@@ -1,1 +1,0 @@
-console.log("Dev2 cargado correctamente");
